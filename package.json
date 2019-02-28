@@ -1,0 +1,13 @@
+{
+  "name": "cien",
+  "version": "1",
+  "description": "30 Day Core Challenge",
+  "main": "index.js",
+  "repository": "https://github.com/n/a",
+  "author": "Teks Nolemich",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
