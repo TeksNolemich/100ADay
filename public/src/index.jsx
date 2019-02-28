@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Selector from './components/Selector.jsx';
 
-ReactDOM.render(
-  <div>This is a test</div>,
-  document.getElementById('application'),
-);
+ReactDOM.render(<Selector />, document.getElementById('application'));
