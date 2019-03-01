@@ -1,15 +1,24 @@
 import React from 'react';
-
+import axios from 'axios';
 class Selector extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: 1 };
+    this.state = { value: 1, video: 'Ha236I-ulzY' };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleSubmit(e) {
-    alert('This is your choice, ' + this.state.value);
+    //take e and send it as the request for the corresponding video
+    axios
+      .get('/videos')
+      .then(function(response) {
+        //on return set video state with response from data base
+        console.log(response, ' the response');
+      })
+      .catch(function(error) {
+        console.log(error, ' the is the errror');
+      });
     e.preventDefault();
   }
 
