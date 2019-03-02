@@ -9,17 +9,17 @@ class Selector extends React.Component {
   }
 
   handleSubmit(e) {
-    //take e and send it as the request for the corresponding video
+    e.preventDefault();
+    const that = this;
     axios
-      .get('/videos')
+      .get(`/videos`, { params: { vid: that.state.value } })
       .then(function(response) {
-        //on return set video state with response from data base
-        console.log(response, ' the response');
+        let vidID = response.data[0].video;
+        that.setState({ video: vidID });
       })
       .catch(function(error) {
         console.log(error, ' the is the errror');
       });
-    e.preventDefault();
   }
 
   handleChange(e) {
@@ -27,19 +27,52 @@ class Selector extends React.Component {
   }
 
   render() {
+    let options = [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+    ];
+
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>
             Pick your day:
             <select value={this.state.value} onChange={this.handleChange}>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
+              {options.map(el => {
+                return (
+                  <option value={el} key={el}>
+                    {el}
+                  </option>
+                );
+              })}
             </select>
           </label>
           <input type="submit" value="Submit" />
@@ -47,7 +80,7 @@ class Selector extends React.Component {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/Ha236I-ulzY"
+          src={`https://www.youtube.com/embed/${this.state.video}`}
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
