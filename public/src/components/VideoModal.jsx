@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button, ButtonToolbar } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 
 class MyVerticallyCenteredModal extends React.Component {
   constructor(props) {
@@ -7,12 +7,7 @@ class MyVerticallyCenteredModal extends React.Component {
   }
   render() {
     return (
-      <Modal
-        {...this.props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
+      <Modal {...this.props}>
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             Modal heading
@@ -23,7 +18,7 @@ class MyVerticallyCenteredModal extends React.Component {
           <iframe
             width="560"
             height="315"
-            src={`https://www.youtube.com/embed/${this.props.videoID}`}
+            src={`https://www.youtube.com/embed/${this.props.videoid}`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -37,33 +32,4 @@ class MyVerticallyCenteredModal extends React.Component {
   }
 }
 
-class AppExample extends React.Component {
-  constructor(...args) {
-    super(...args);
-
-    this.state = { modalShow: false };
-  }
-
-  render() {
-    let modalClose = () => this.setState({ modalShow: false });
-    // console.log(this.props.videoDayId, ' the video id handed down');
-    return (
-      <ButtonToolbar>
-        <Button
-          variant="primary"
-          onClick={() => this.setState({ modalShow: true })}
-        >
-          Launch vertically centered modal
-        </Button>
-
-        <MyVerticallyCenteredModal
-          show={this.state.modalShow}
-          onHide={modalClose}
-          videoID={this.props.videoDayId}
-        />
-      </ButtonToolbar>
-    );
-  }
-}
-
-export default AppExample;
+export default MyVerticallyCenteredModal;
