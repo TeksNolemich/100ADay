@@ -7,17 +7,14 @@ class MyVerticallyCenteredModal extends React.Component {
   }
   render() {
     return (
-      <Modal {...this.props}>
+      <Modal {...this.props} dialogClassName={'centered'}>
         <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Modal heading
-          </Modal.Title>
+          <Modal.Title>{this.props.day}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Centered Modal</h4>
           <iframe
-            width="560"
-            height="315"
+            width="100%"
+            height="300"
             src={`https://www.youtube.com/embed/${this.props.videoid}`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -25,7 +22,9 @@ class MyVerticallyCenteredModal extends React.Component {
           />
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={this.props.onHide}>Close</Button>
+          <Button variant={'dark'} onClick={this.props.onHide}>
+            Close
+          </Button>
         </Modal.Footer>
       </Modal>
     );
