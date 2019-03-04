@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "development": "webpack -d --watch",
-    "serve": "node server.js",
+    "serve": "nodemon server.js",
+    "dev": "npm run serve | npm run development",
     "heroku-postbuild": "echo Skip build on Heroku"
   },
   "repository": "https://github.com/n/a",
