@@ -22,7 +22,7 @@ Open two terminal window and run the following commands
 npm run dev
 ```
 ```
-yard dev
+yarn dev
 ```
 
 ## Built With
