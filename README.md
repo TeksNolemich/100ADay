@@ -1,5 +1,5 @@
 # 100ADay
-
+[Running Instance](https://abchallenge.herokuapp.com/)
 Small calendar application that allows you to start a 30 day Ab Challenge
 
 ## Getting Started
@@ -16,7 +16,7 @@ npm install
 yarn
 ```
 
-###Running Locally
+### Running Locally
 Open two terminal window and run the following commands
 ``` 
 npm run dev
@@ -31,3 +31,12 @@ yard dev
 * [Express](https://maven.apache.org/) - The web frameowrk used
 * [React](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 * [Node.js](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Built for My Beautiful Fiance - Julie Tan
+* [Blogilates](https://www.youtube.com/user/blogilates)
