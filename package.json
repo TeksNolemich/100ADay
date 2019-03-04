@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "development": "webpack -d --watch",
+    "serve": "node server.js",
     "heroku-postbuild": "echo Skip build on Heroku"
   },
   "repository": "https://github.com/n/a",
