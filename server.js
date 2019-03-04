@@ -4,7 +4,7 @@ const express = require('express');
 const BodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const app = express();
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 const uri =
   'mongodb://another:1234art@videodata-shard-00-00-emsnc.mongodb.net:27017,videodata-shard-00-01-emsnc.mongodb.net:27017,videodata-shard-00-02-emsnc.mongodb.net:27017/test?ssl=true&replicaSet=VideoData-shard-0&authSource=admin&retryWrites=true';

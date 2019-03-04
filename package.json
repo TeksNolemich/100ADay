@@ -2,7 +2,7 @@
   "name": "cien",
   "version": "1",
   "description": "30 Day Core Challenge",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "heroku-postbuild": "echo Skip build on Heroku"
