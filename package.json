@@ -1,6 +1,6 @@
 {
   "name": "cien",
-  "version": "1",
+  "version": "1.0.0",
   "description": "30 Day Core Challenge",
   "main": "server.js",
   "scripts": {
