@@ -28,9 +28,9 @@ yarn dev
 ## Built With
 
 * [MongoDB](http://www.dropwizard.io/1.0.2/docs/) - The database used
-* [Express](https://maven.apache.org/) - The web frameowrk used
-* [React](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-* [Node.js](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Express](https://maven.apache.org/) - The web-framework used
+* [React](https://rometools.github.io/rome/) - The Front-End framework used
+* [Node.js](https://rometools.github.io/rome/) - JavaScript runtime environment
 
 ## License
 
