@@ -17,7 +17,7 @@ yarn
 ```
 
 ### Running Locally
-Open two terminal window and run the following commands
+Open a terminal window and run the following commands
 ``` 
 npm run dev
 ```
